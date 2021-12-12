@@ -60,7 +60,7 @@ const Upload = () => {
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="value">
                     <Form.Label>File Value</Form.Label>
-                    <Form.Control type="text" name ="value" value={metaData.value} onChange={handleMetaDataChange} placeholder="Enter File Value"/>
+                    <Form.Control type="number" name ="value" value={metaData.value} onChange={handleMetaDataChange} placeholder="Enter File Value"/>
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="file">
                     <Form.Label>Attach File</Form.Label>
