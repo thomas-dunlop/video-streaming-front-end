@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
 import Container from 'react-bootstrap/Container';
 import { Player, NavigationHeader } from '../components'
+import URL from '../constants'
 
 const Video = () => {
   const { id } = useParams()
-  const url = `http://localhost:3000/api/videos/${id}`
+  const url = `${URL}api/videos/${id}`
   return (
     <div>
       <NavigationHeader />

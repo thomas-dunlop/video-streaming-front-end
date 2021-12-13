@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import Table from 'react-bootstrap/Table'
 import Container from 'react-bootstrap/Container';
 import { NavigationHeader } from "../components";
+import URL from '../constants'
 
 const Videos = () => {
   const [pageData, setPageData] = useState([])
   const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
-    fetch('http://localhost:3000/api/videos')
+    fetch(URL + 'api/videos')
       .then(response => {
         if (response.ok) {
           return response.json()
