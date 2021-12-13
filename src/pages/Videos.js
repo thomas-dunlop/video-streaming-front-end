@@ -41,6 +41,7 @@ const Videos = () => {
               <th>id</th>
               <th>Name</th>
               <th>Value</th>
+              <th>Date Created</th>
               <th>Link</th>
             </tr>
           </thead>
@@ -52,6 +53,7 @@ const Videos = () => {
                     <td>{element._id}</td>
                     <td>{element.metadata.name}</td>
                     <td>{element.metadata.value}</td>
+                    <td>{element.uploadDate}</td>
                     <td><a href={'/videos/' + element._id}>Watch</a></td>
                   </tr>
                 )

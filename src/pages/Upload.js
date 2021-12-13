@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Container, Button, Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 import { Player, NavigationHeader } from '../components'
 import URL from '../constants'
 
@@ -23,7 +23,7 @@ const Upload = () => {
 
   const handleFileChange = (event) => {
     setSelectedFile(event.target.files[0]);
-    const url = URL.createObjectURL(event.target.files[0])
+    const url = window.URL.createObjectURL(event.target.files[0])
     setVideoFilePath(url)
   }
 
@@ -55,30 +55,37 @@ const Upload = () => {
     <div>
       <NavigationHeader />
       <Container>
-        <Form>
-          <Form.Group className="mb-3" controlId="name">
-            <Form.Label>File Name</Form.Label>
-            <Form.Control type="text" name="name" value={metaData.name} onChange={handleMetaDataChange} placeholder="Enter File Name" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="value">
-            <Form.Label>File Value</Form.Label>
-            <Form.Control type="number" name="value" value={metaData.value} onChange={handleMetaDataChange} placeholder="Enter File Value" />
-          </Form.Group>
-          <Form.Group className="mb-3" controlId="file">
-            <Form.Label>Attach File</Form.Label>
-            <Form.Control type="file" name="file" onChange={handleFileChange} />
-          </Form.Group>
-          <Button variant="primary" onClick={handleSubmit}>Submit</Button>
-        </Form>
-        {
-          videoFilePath ? (
-            <div>
-              <Player url={videoFilePath} />
-            </div>
-          ) : (
-            null
-          )
-        }
+        <Row>
+          <Col>
+            <Form>
+              <Form.Group className="mb-3" controlId="name">
+                <Form.Label>File Name</Form.Label>
+                <Form.Control type="text" name="name" value={metaData.name} onChange={handleMetaDataChange} placeholder="Enter File Name" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="value">
+                <Form.Label>File Value</Form.Label>
+                <Form.Control type="number" name="value" value={metaData.value} onChange={handleMetaDataChange} placeholder="Enter File Value" />
+              </Form.Group>
+              <Form.Group className="mb-3" controlId="file">
+                <Form.Label>Attach File</Form.Label>
+                <Form.Control type="file" name="file" onChange={handleFileChange} />
+              </Form.Group>
+              <Button variant="primary" onClick={handleSubmit}>Submit</Button>
+            </Form>
+          </Col>
+          <Col>
+            {
+              videoFilePath ? (
+                <div>
+                  <br></br>
+                  <Player url={videoFilePath} />
+                </div>
+              ) : (
+                null
+              )
+            }
+          </Col>
+        </Row>
       </Container>
     </div>
   )

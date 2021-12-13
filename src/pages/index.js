@@ -1,11 +1,11 @@
 import Upload from './Upload';
 import Videos from './Videos';
-import Video from './Video';
+import SingleVideo from './SingleVideo';
 import Home from './Home';
 
 export {
   Upload,
   Videos,
-  Video,
+  SingleVideo,
   Home
 }

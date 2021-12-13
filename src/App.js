@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import {Upload, Videos, Video, Home} from './pages'
+import {Upload, Videos, SingleVideo, Home} from './pages'
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
           <Route path = "/" element = {<Home />}/>
           <Route path = "upload" element = {<Upload />}/>
           <Route path = "videos" element = {<Videos />}/>
-          <Route path = "videos/:id" element = {<Video />}/>
+          <Route path = "videos/:id" element = {<SingleVideo />}/>
         </Routes>
       </Router>
     </div>

@@ -1,11 +1,9 @@
 import React from 'react'
 import ReactPlayer from 'react-player'
 
-const Player = (
-  url
-) => {
+const Player = (props) => {
   return (
-    <ReactPlayer url={url.url} controls />
+    <ReactPlayer url={props.url} controls />
   )
 }
 
