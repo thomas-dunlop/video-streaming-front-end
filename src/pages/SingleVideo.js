@@ -6,7 +6,7 @@ import URL from '../constants'
 
 const SingleVideo = () => {
   const { id } = useParams()
-  const url = `${URL}api/videos/${id}`
+  const url = `${URL}api/stream/${id}`
   return (
     <div>
       <NavigationHeader />

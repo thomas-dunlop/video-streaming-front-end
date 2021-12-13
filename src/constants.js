@@ -1,4 +1,4 @@
-let production = false 
+let production = true 
 let URL
 if (production === false){
     URL = 'http://localhost:3000/'
