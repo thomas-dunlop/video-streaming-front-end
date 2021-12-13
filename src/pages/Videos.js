@@ -100,8 +100,8 @@ const Videos = () => {
         }
         <br></br>
         <h3>Query</h3>
-        <h5>Current Query</h5>
-        <p>{query}</p>
+        <h5>Current Query:</h5>
+        <p>{JSON.stringify(query)}</p>
         <Form>
           <Form.Group className="mb-3" controlId="metadata.name">
             <Form.Label>Name</Form.Label>
