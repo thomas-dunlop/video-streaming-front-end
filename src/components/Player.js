@@ -2,14 +2,11 @@ import React from 'react'
 import ReactPlayer from 'react-player'
 
 const Player = (
-    url
+  url
 ) => {
-    return (
-        <div>
-            <ReactPlayer url={url.url} controls/>
-        </div>
-        
-    )
+  return (
+    <ReactPlayer url={url.url} controls />
+  )
 }
 
 export default Player

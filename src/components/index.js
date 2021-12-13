@@ -1,5 +1,7 @@
 import Player from './Player';
+import NavigationHeader from './NavigationHeader';
 
 export {
-    Player,
+  Player,
+  NavigationHeader
 }
